@@ -8,7 +8,7 @@ Learn. Build. Explore.
 ---
 
 ## 🧩 About
-KotlinFinity is a collection of Kotlin basics, examples, and explanations -- built to help beginners learn kotlin from scratch and explore its infinite possibilities.
+KotlinFinity is a collection of Kotlin infinity.basics, examples, and explanations -- built to help beginners learn kotlin from scratch and explore its infinite possibilities.
 
 Think of it as a Kotlin playground with short and practical snippets.
 

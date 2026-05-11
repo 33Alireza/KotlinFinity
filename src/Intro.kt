@@ -22,7 +22,7 @@ fun main(){
     println("Project Language : $language 🧑‍💻🖱️")
     println()
 
-    val introduction : String = "KotlinFinity is a collection of Kotlin basics, examples, and explanations -- built to help beginners learn kotlin from scratch and explore its infinite possibilities."
+    val introduction : String = "KotlinFinity is a collection of Kotlin infinity.basics, examples, and explanations -- built to help beginners learn kotlin from scratch and explore its infinite possibilities."
 
     println("Project Introduction : $introduction 💬💬")
     println()
