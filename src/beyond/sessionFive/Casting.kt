@@ -7,4 +7,9 @@ fun main() {
 
     println(castedNumber)
 
+    println()
+
+    val unsafeCastedNumber = exampleNumber as String
+    println(unsafeCastedNumber)
+
 }
