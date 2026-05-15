@@ -9,6 +9,8 @@ fun main() {
         println(languageName.toInt())
     } catch (e: Exception) {
         println(e.message)
+    } finally {
+        println(languageName)
     }
 
     val divisionOperation = try {
