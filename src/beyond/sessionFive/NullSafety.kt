@@ -8,11 +8,21 @@ fun main() {
     println(nullableString)
 
 
-      val nullVariable: String? = null
-      println(nullVariable?.length ?: 0)
+    val nullVariable: String? = null
+    println(nullVariable?.length ?: 0)
 
     nullableString = null
     nullableString?.let {
         println(it.length)
+    }
+
+    showStringLength(nonNullableString)
+}
+
+fun showStringLength(string: String?): String {
+    return if (!string.isNullOrBlank()) {
+        "The string length is ${string.length}"
+    } else {
+        "The String is null"
     }
 }
