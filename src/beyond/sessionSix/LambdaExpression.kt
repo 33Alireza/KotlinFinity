@@ -24,4 +24,16 @@ fun main() {
     println(doubledNumbersList)
     println(tripledNumbersList)
 
+    val numberOne = 3
+    val numberTwo = 4
+
+    showOperationResult(operation = { numberOne + numberTwo })
+    showOperationResult(operation = { numberOne * numberTwo })
+
+}
+
+fun showOperationResult(
+    operation: () -> Int
+) {
+    println(operation())
 }
