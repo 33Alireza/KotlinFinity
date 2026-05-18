@@ -8,6 +8,11 @@ fun main() {
     val userNumberTwo = UserClass(1, "ifmat")
     userNumberTwo.showUserInfo()
 
+    println(userNumberOne.userName)
+    println(userNumberTwo.userName)
+
+    println(userNumberOne == userNumberTwo)
+
 }
 
 class UserClass(val userId: Int, val userName: String) {
