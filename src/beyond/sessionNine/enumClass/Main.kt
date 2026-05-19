@@ -8,4 +8,13 @@ fun main() {
         println("${day.ordinal} -> ${day.name}")
     }
 
+    println(LanguagesEnumClass.KOTLIN)
+
+    val profile = Profile(LanguagesEnumClass.JAVASCRIPT)
+    profile.showProfile()
+
+    for (language in LanguagesEnumClass.entries) {
+        println("${language.ordinal} -> ${language.name}")
+    }
+
 }

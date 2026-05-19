@@ -6,6 +6,4 @@ enum class LanguagesEnumClass(val langId: Int) {
     JAVA(2),
     JAVASCRIPT(3),
     DART(4),
-    RUST(5),
-    GO(6)
 }
