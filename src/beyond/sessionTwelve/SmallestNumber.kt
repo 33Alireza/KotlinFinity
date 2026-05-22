@@ -17,14 +17,3 @@ fun main() {
     println(initialNumber)
 
 }
-
-fun nullCheckAndReturn(): Int {
-
-    while (true) {
-
-        val inputValue = readlnOrNull()?.toIntOrNull()
-
-        if (inputValue != null) return inputValue
-
-    }
-}
