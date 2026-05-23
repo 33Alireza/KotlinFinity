@@ -2,7 +2,11 @@ package beyond.sessionThirteen
 
 class Logic {
 
-    var operatingSystemsList = mutableListOf<OperatingSystem>()
+    private var _operatingSystemsList = mutableListOf<OperatingSystem>()
+    val operatingSystemsList = _operatingSystemsList
+
+    private var _uiState = UiState.Loading
+    val uiState = _uiState
 
     init {
         getList()
@@ -13,12 +17,14 @@ class Logic {
         try {
 
             val result = FakeApi.getOperatingSystemList()
-            operatingSystemsList = result
+            _operatingSystemsList = result
+
+            _uiState = UiState.Success
 
 
         } catch (e: Exception) {
 
-            println(e.message)
+            _uiState = UiState.Error
 
         }
 
