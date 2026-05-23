@@ -12,7 +12,7 @@ class Logic {
         getList()
     }
 
-    fun getList() {
+    private fun getList() {
 
         try {
 
@@ -22,7 +22,7 @@ class Logic {
             _uiState = UiState.Success
 
 
-        } catch (e: Exception) {
+        } catch (_: Exception) {
 
             _uiState = UiState.Error
 

@@ -35,7 +35,7 @@ object FakeApi {
 
     fun getOperatingSystemList(): MutableList<OperatingSystem> {
 
-        if ((1..100).random() <= 20) {
+        if ((1..100).random() <= 5) {
             throw IOException("Failed to fetch weather data")
         }
 
