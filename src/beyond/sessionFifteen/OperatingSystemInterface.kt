@@ -2,10 +2,9 @@ package beyond.sessionFifteen
 
 interface OperatingSystemInterface {
 
-    val operatingSystemId: String?
+    val operatingSystemId: Int?
     val operatingSystemName: String?
     val operatingSystemProgrammingLanguage: String?
-    val operatingSystemDistributor: String?
 
     fun showInfo()
 
