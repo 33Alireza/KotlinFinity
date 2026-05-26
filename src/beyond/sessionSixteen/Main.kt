@@ -54,6 +54,12 @@ fun main() {
                     println("Movie not found")
                 }
             }
+
+            "L" -> {
+                for (movie in movies) {
+                    println("${movie.id} -> ${movie.title} -> ${movie.year}")
+                }
+            }
         }
     }
 
