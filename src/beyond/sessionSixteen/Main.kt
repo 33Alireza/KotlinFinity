@@ -2,7 +2,7 @@ package beyond.sessionSixteen
 
 fun main() {
 
-    val movies = mutableListOf<Movie>(
+    val movies = mutableListOf(
         Movie(
             "0",
             "Interstellar",
@@ -29,5 +29,32 @@ fun main() {
             "2000"
         ),
     )
+
+    while (true) {
+        println(
+            """
+            Movie -> M
+            Movies List -> L
+            Add Movie -> A
+            Remove Movie -> R
+            Exit -> E
+        """.trimIndent()
+        )
+
+        val inputValue = readln()
+
+        when (inputValue) {
+            "M" -> {
+                println("Please enter a movie id :")
+                val movieId = readln()
+
+                try {
+                    println(movies.find { it.id == movieId })
+                } catch (_: Exception) {
+                    println("Movie not found")
+                }
+            }
+        }
+    }
 
 }
