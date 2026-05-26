@@ -43,25 +43,33 @@ fun main() {
 
         val inputValue = readln()
 
-        when (inputValue) {
-            "M" -> {
+        if (inputValue.lowercase() == "e") {
+            println("May the force be with you ✨")
+            break
+        }
+
+        when (inputValue.lowercase()) {
+            "m" -> {
                 println("Please enter the movie's id :")
                 val movieId = readln()
 
                 try {
-                    println(movies.find { it.id == movieId })
+                    val movie = movies.find { it.id == movieId }
+                    movie?.let {
+                        println("${movie.id} -> ${movie.title} -> ${movie.year}")
+                    }
                 } catch (_: Exception) {
                     println("Movie not found")
                 }
             }
 
-            "L" -> {
+            "l" -> {
                 for (movie in movies) {
                     println("${movie.id} -> ${movie.title} -> ${movie.year}")
                 }
             }
 
-            "A" -> {
+            "a" -> {
                 println("Please enter the movie's id :")
                 val movieId = readln()
                 println("Please enter the movie's title :")
@@ -77,16 +85,18 @@ fun main() {
                             movieYear
                         )
                     )
+                    println("Movie Added")
                 } catch (_: Exception) {
                     println("Unknown Error")
                 }
             }
 
-            "R" -> {
+            "r" -> {
                 println("Please enter the movie's id :")
                 val movieId = readln()
                 try {
                     movies.removeIf { it.id == movieId }
+                    println("Movie Removed")
                 } catch (_: Exception) {
                     println("Unknown Error")
                 }
