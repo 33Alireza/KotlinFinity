@@ -60,6 +60,27 @@ fun main() {
                     println("${movie.id} -> ${movie.title} -> ${movie.year}")
                 }
             }
+
+            "A" -> {
+                println("Please enter the movie's id :")
+                val movieId = readln()
+                println("Please enter the movie's title :")
+                val movieTitle = readln()
+                println("Please enter the movie's year :")
+                val movieYear = readln()
+
+                try {
+                    movies.add(
+                        Movie(
+                            movieId,
+                            movieTitle,
+                            movieYear
+                        )
+                    )
+                } catch (_: Exception) {
+                    println("Unknown Error")
+                }
+            }
         }
     }
 
