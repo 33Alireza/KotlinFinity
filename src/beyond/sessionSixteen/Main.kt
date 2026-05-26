@@ -45,7 +45,7 @@ fun main() {
 
         when (inputValue) {
             "M" -> {
-                println("Please enter a movie id :")
+                println("Please enter the movie's id :")
                 val movieId = readln()
 
                 try {
@@ -77,6 +77,16 @@ fun main() {
                             movieYear
                         )
                     )
+                } catch (_: Exception) {
+                    println("Unknown Error")
+                }
+            }
+
+            "R" -> {
+                println("Please enter the movie's id :")
+                val movieId = readln()
+                try {
+                    movies.removeIf { it.id == movieId }
                 } catch (_: Exception) {
                     println("Unknown Error")
                 }
