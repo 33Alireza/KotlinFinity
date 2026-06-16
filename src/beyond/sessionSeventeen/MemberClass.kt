@@ -10,4 +10,8 @@ class MemberClass {
             println("${member.fullName} -> ${member.email} -> ${member.type}")
         }
     }
+
+    fun addMember(fullName: String, email: String, type: MemberType) {
+        _membersList.add(Member(fullName, email, type))
+    }
 }
