@@ -5,13 +5,22 @@ class MemberClass {
     val membersList = _membersList.toList()
 
     fun showMembers() {
-        if (_membersList.isEmpty()) println("No Members")
-        else for (member in _membersList) {
-            println("${member.fullName} -> ${member.email} -> ${member.type}")
+        try {
+            if (_membersList.isEmpty()) println("No Members")
+            else for (member in _membersList) {
+                println("${member.fullName} -> ${member.email} -> ${member.type}")
+            }
+        } catch (_: Exception) {
+            println("Unknown Error")
         }
     }
 
     fun addMember(fullName: String, email: String, type: MemberType) {
-        _membersList.add(Member(fullName, email, type))
+        try {
+            _membersList.add(Member(fullName, email, type))
+            println("Member Added Successfully")
+        } catch (_: Exception) {
+            println("Unknown Error")
+        }
     }
 }
