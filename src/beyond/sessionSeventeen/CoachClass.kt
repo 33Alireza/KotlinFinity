@@ -22,4 +22,13 @@ class CoachClass {
             println("Unknown Error")
         }
     }
+
+    fun removeCoach(id: String) {
+        try {
+            coachesList.removeIf { it.id == id }
+            println("Coach Removed Successfully")
+        } catch (_: Exception) {
+            println("Unknown Error")
+        }
+    }
 }
