@@ -13,4 +13,13 @@ class CoachClass {
             println("Unknown Error")
         }
     }
+
+    fun addCoach(coach: Coach) {
+        try {
+            coachesList.add(coach)
+            println("Coach Added Successfully")
+        } catch (_: Exception) {
+            println("Unknown Error")
+        }
+    }
 }

@@ -14,9 +14,9 @@ class MemberClass {
         }
     }
 
-    fun addMember(id: String, fullName: String, email: String, type: MemberType) {
+    fun addMember(member: Member) {
         try {
-            membersList.add(Member(id, fullName, email, type))
+            membersList.add(member)
             println("Member Added Successfully")
         } catch (_: Exception) {
             println("Unknown Error")
