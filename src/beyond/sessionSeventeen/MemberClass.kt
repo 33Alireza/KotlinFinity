@@ -1,13 +1,12 @@
 package beyond.sessionSeventeen
 
 class MemberClass {
-    private val _membersList = mutableListOf<Member>()
-    val membersList = _membersList.toList()
+    private val membersList = mutableListOf<Member>()
 
     fun showMembers() {
         try {
-            if (_membersList.isEmpty()) println("No Members")
-            else for (member in _membersList) {
+            if (membersList.isEmpty()) println("No Members")
+            else for (member in membersList) {
                 println("${member.id} = ${member.fullName} -> ${member.email} -> ${member.type}")
             }
         } catch (_: Exception) {
@@ -17,7 +16,7 @@ class MemberClass {
 
     fun addMember(id: String, fullName: String, email: String, type: MemberType) {
         try {
-            _membersList.add(Member(id, fullName, email, type))
+            membersList.add(Member(id, fullName, email, type))
             println("Member Added Successfully")
         } catch (_: Exception) {
             println("Unknown Error")
@@ -26,7 +25,7 @@ class MemberClass {
 
     fun removeMember(id: String) {
         try {
-            _membersList.removeIf { it.id == id }
+            membersList.removeIf { it.id == id }
             println("Member Removed Successfully")
         } catch (_: Exception) {
             println("Unknown Error")
