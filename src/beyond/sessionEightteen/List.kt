@@ -8,11 +8,11 @@ fun main() {
         println(fruit)
     }
 
-    val fruitsMutableMap = mutableListOf("Apple", "Banana", "Pear")
-    fruitsMutableMap.add("Pineapple")
-    fruitsMutableMap.remove("Pear")
+    val fruitsMutableList = mutableListOf("Apple", "Banana", "Pear")
+    fruitsMutableList.add("Pineapple")
+    fruitsMutableList.remove("Pear")
 
-    for (fruit in fruitsMutableMap) {
+    for (fruit in fruitsMutableList) {
         println(fruit)
     }
 
