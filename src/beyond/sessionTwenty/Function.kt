@@ -2,6 +2,7 @@ package beyond.sessionTwenty
 
 fun main() {
     showName()
+    showName("Android")
 
     showResult(numberTwo = 3, numberOne = 4)
 
@@ -9,8 +10,8 @@ fun main() {
     println(result)
 }
 
-fun showName() {
-    println("Kotlin")
+fun showName(name: String = "Kotlin") {
+    println(name)
 }
 
 fun showResult(numberOne: Int, numberTwo: Int) {
