@@ -4,6 +4,9 @@ fun main() {
     showName()
 
     showResult(4, 3)
+
+    val result = returnResult(6, 9)
+    println(result)
 }
 
 fun showName() {
@@ -12,4 +15,8 @@ fun showName() {
 
 fun showResult(numberOne: Int, numberTwo: Int) {
     println(numberOne + numberTwo)
+}
+
+fun returnResult(numberOne: Int, numberTwo: Int): Int {
+    return numberOne + numberTwo
 }
