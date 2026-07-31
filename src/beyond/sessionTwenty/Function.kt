@@ -8,6 +8,8 @@ fun main() {
 
     val result = returnResult(6, 9)
     println(result)
+
+    singleExpressionFunction(3, 7)
 }
 
 fun showName(name: String = "Kotlin") {
@@ -21,3 +23,5 @@ fun showResult(numberOne: Int, numberTwo: Int) {
 fun returnResult(numberOne: Int, numberTwo: Int): Int {
     return numberOne + numberTwo
 }
+
+fun singleExpressionFunction(numberOne: Int, numberTwo: Int) = numberOne * numberTwo
