@@ -3,7 +3,7 @@ package beyond.sessionTwenty
 fun main() {
     showName()
 
-    showResult(4, 3)
+    showResult(numberTwo = 3, numberOne = 4)
 
     val result = returnResult(6, 9)
     println(result)
