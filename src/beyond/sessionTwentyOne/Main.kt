@@ -1,17 +1,40 @@
 package beyond.sessionTwentyOne
 
-class User(var id: Int, val email: String) {
-    fun printInfo() {
-        println("$id: $email")
+open class OperatingSystem {
+    open val id: Int? = null
+    open val name: String? = null
+    open val language: String? = null
+
+    open fun showInfo() {
+        println("$id -> $name -> $language")
+    }
+}
+
+class Android : OperatingSystem() {
+    override val id = 1
+    override val name = "Android"
+    override val language = "Kotlin"
+
+    override fun showInfo() {
+        println("$name -> $language")
+    }
+}
+
+class Ios : OperatingSystem() {
+    override val id = 2
+    override val name = "iOS"
+    val distributor = "Apple"
+
+    override fun showInfo() {
+        println("$name -> $distributor")
     }
 }
 
 fun main() {
-    val firstUser = User(1, "example@gmail.com")
-    println("${firstUser.id} -> ${firstUser.email}")
+    val android = Android()
+    android.showInfo()
+    println("${android.id} -> ${android.name}")
 
-    firstUser.id = 3
-
-    val secondUser = User(2, "jane@gmail.com")
-    secondUser.printInfo()
+    val ios = Ios()
+    ios.showInfo()
 }
