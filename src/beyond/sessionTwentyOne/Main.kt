@@ -1,13 +1,11 @@
 package beyond.sessionTwentyOne
 
-open class OperatingSystem {
-    open val id: Int? = null
-    open val name: String? = null
-    open val language: String? = null
+abstract class OperatingSystem {
+    abstract val id: Int?
+    abstract val name: String?
+    abstract val language: String?
 
-    open fun showInfo() {
-        println("$id -> $name -> $language")
-    }
+    abstract fun showInfo()
 }
 
 class Android : OperatingSystem() {
@@ -23,6 +21,7 @@ class Android : OperatingSystem() {
 class Ios : OperatingSystem() {
     override val id = 2
     override val name = "iOS"
+    override val language = "Swift"
     val distributor = "Apple"
 
     override fun showInfo() {
