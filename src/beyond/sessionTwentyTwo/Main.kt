@@ -28,6 +28,20 @@ open class ProtectedParentClass {
     }
 }
 
+open class InternalParentClass {
+    internal val name = "Kotlin"
+
+    internal fun parentShowName() {
+        println(name)
+    }
+
+    class InternalChildClass : InternalParentClass() {
+        internal fun childShowName() {
+            println(name)
+        }
+    }
+}
+
 
 fun main() {
     val publicParentClass = PublicParentClass()
@@ -45,4 +59,13 @@ fun main() {
 
     val protectedChildClass = ProtectedParentClass.ProtectedChildClass()
     protectedChildClass.parentShowName()
+
+
+    val internalParentClass = InternalParentClass()
+    println(internalParentClass.name)
+    internalParentClass.parentShowName()
+
+    val internalChildClass = InternalParentClass.InternalChildClass()
+    println(internalChildClass.name)
+    internalChildClass.parentShowName()
 }
