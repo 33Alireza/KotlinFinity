@@ -1,93 +1,21 @@
 package beyond.sessionTwentyTwo
 
-open class PublicParentClass {
-    val name = "Kotlin"
-
-    fun parentShowName() {
-        println(name)
-    }
-
-    class PublicChildClass : PublicParentClass() {
-        fun childShowName() {
-            println(name)
-        }
-    }
+fun showInfo() {
+    println("Kotlin")
 }
 
-open class ProtectedParentClass {
-    protected val name = "Kotlin"
-
-    open fun parentShowName() {
-        println(name)
-    }
-
-    class ProtectedChildClass : ProtectedParentClass() {
-        override fun parentShowName() {
-            println(name)
-        }
-    }
+fun showInfo(number: Int) {
+    println(number)
 }
 
-open class InternalParentClass {
-    internal val name = "Kotlin"
-
-    internal fun parentShowName() {
-        println(name)
-    }
-
-    class InternalChildClass : InternalParentClass() {
-        internal fun childShowName() {
-            println(name)
-        }
-    }
+fun showInfo(numberOne: Int, numberTwo: Int) {
+    println(numberOne + numberTwo)
 }
-
-open class PrivateParentClass {
-    private val name = "Kotlin"
-
-    private fun parentShowName() {
-        println(name)
-    }
-
-    class PrivateChildClass : PrivateParentClass() {
-        /*fun childShowName() {
-            println(name)
-        }*/
-    }
-}
-
 
 fun main() {
-    val publicParentClass = PublicParentClass()
-    println(publicParentClass.name)
-    publicParentClass.parentShowName()
+    showInfo()
 
-    val publicChildClass = PublicParentClass.PublicChildClass()
-    println(publicChildClass.name)
-    publicChildClass.childShowName()
+    showInfo(7)
 
-
-    val protectedParentClass = ProtectedParentClass()
-    // println(protectedParentClass.name)
-    // protectedParentClass.parentShowName()
-
-    val protectedChildClass = ProtectedParentClass.ProtectedChildClass()
-    protectedChildClass.parentShowName()
-
-
-    val internalParentClass = InternalParentClass()
-    println(internalParentClass.name)
-    internalParentClass.parentShowName()
-
-    val internalChildClass = InternalParentClass.InternalChildClass()
-    println(internalChildClass.name)
-    internalChildClass.parentShowName()
-
-    val privateParentClass = PrivateParentClass()
-    //println(privateParentClass.name)
-    //privateParentClass.parentShowName()
-
-    val privateChildClass = PrivateParentClass.PrivateChildClass()
-    //println(privateChildClass.name)
-    //privateChildClass.childShowName()
+    showInfo(3, 4)
 }
