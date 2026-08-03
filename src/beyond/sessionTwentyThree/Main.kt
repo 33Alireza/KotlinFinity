@@ -1,17 +1,20 @@
 package beyond.sessionTwentyThree
 
-data class User(
-    val id: Int,
-    val name: String,
-    val age: Int,
-    val email: String,
-)
+enum class Days {
+    SATURDAY,
+    SUNDAY,
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+}
 
 fun main() {
-    val firstUser = User(1, "Alireza", 19, "alireza@gmail.com")
-    println("${firstUser.id} ${firstUser.name} ${firstUser.age} ${firstUser.email}")
-    println(firstUser.name)
+    val today = Days.MONDAY
+    println(today)
 
-    val secondUser = User(2, "Hussein", 26, "hussein@gmail.com")
-    println(secondUser)
+    for (day in Days.entries) {
+        println("${day.ordinal} -> ${day.name}")
+    }
 }
