@@ -1,11 +1,13 @@
 package beyond.sessionTwentyFour
 
 fun main() {
-    println("A man a plan a canal Panama".isPalindrome())
-    println("hello".isPalindrome())
+    val numberBox = Box(42)
+    val textBox = Box("Hello")
+
+    println(numberBox)
+    println(textBox)
 }
 
-fun String.isPalindrome(): Boolean {
-    val cleaned = this.filter { it.isLetterOrDigit() }.lowercase()
-    return cleaned == cleaned.reversed()
+class Box<T>(val value: T) {
+    fun get(): T = value
 }
